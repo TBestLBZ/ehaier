@@ -15,32 +15,66 @@
     background: #fff;
     z-index: 10;
     float: left;
+    position: relative;
 }
 
-.supperbanner_btn_wrap {
-    width: 100%;
-    z-index: 999;
-    height: 20px;
-    position: absolute;
-    top: 90%;
-    text-align: center;
-    margin-left: -20px;
+.banner-list{
+    height: 100%;
+    position: relative;
+    li{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: -952px;
+    }
 }
-.supperbanner_btn_wrap span {
+.left{
     display: inline-block;
+    position: absolute;
+    left: 210px;
+    top: 185px;
     width: 20px;
-    height: 20px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 5;
+    background: url(../images/index_new_icos.png) no-repeat -125px -31px;
+}
+.right{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 185px;
+    width: 20px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 5;
+    background: url(../images/index_new_icos.png) no-repeat -158px -31px;
+}
+.circular{
+    position: absolute;
+    left: 50%;
+    margin: 10px auto 0;
+    margin-left: -55px;
+    height: 15px;
+    text-align: center;
+    bottom: 10px;
+    padding: 1px 15px 2px;
+    border-radius: 50px;
+    background-color: rgba(255,255,255,.5);
+}
+.circular-btn{
+    display: inline-block;
+    overflow: hidden;
+    margin: 1px 5px 0;
+    width: 12px;
+    height: 12px;
+    background: #b6b6b6;
     border-radius: 50%;
-    background: rgba(0, 100, 100, .6);
-    color: rgba(0, 0, 0, .6);
-    margin-left: 20px;
-    transition: all .5s;
+    cursor: pointer;
 }
-.supperbanner_btn_wrap span.supperbanner_active {
-    background: rgba(0, 0, 0, 1);
+.circular-btnon{
+    background: #ff4949;
 }
-
-
 .main-right{
     width: 230px;
     margin-top: 1px;
@@ -656,33 +690,36 @@
     overflow: hidden;
     vertical-align: middle;
 }
-.card1{
+.icon1{
     background: url(../images/index_new_icos.png) no-repeat -25px -356px;
 }
-.card2{
+.icon2{
     background: url(../images/index_new_icos.png) no-repeat -175px -356px;
 }
-.card3{
+.icon3{
     background: url(../images/index_new_icos.png) no-repeat 0 -356px;
 }
-.card4{
+.icon4{
     background: url(../images/index_new_icos.png) no-repeat -50px -356px;
 }
-.card5{
+.icon5{
     background: url(../images/index_new_icos.png) no-repeat -75px -356px;
 }
-.card6{
+.icon6{
     background: url(../images/index_new_icos.png) no-repeat -100px -356px;
 }
-.card7{
+.icon7{
     background: url(../images/index_new_icos.png) no-repeat -125px -356px;
 }
-.card8{
+.icon8{
     background: url(../images/index_new_icos.png) no-repeat -150px -356px;
 }
 .card-body{
     background-color: #fff;
     padding: 10px;
+}
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8{
+    display: none
 }
 .show-banner{
     float: left;
@@ -767,6 +804,217 @@
     z-index: 10;
     top: 65px;
     left: 30px;
+    i{
+        font-size: 12px;
+    }
+}
+.saying{
+    margin-bottom: 20px;
+}
+.saying-body{
+    margin: 0 auto;
+    width: 1190px;
+}
+.saying-head{
+    background-color: #2979ff;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 10px 10px 0 0;
+    padding: 0 18px;
+    h3{
+        float: left;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+        i{
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin-right: 6px;
+            background: url(../images/index_new_icos.png) no-repeat -41px -271px;
+            vertical-align: middle;
+        }
+        span{
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+            line-height: 56px;
+        }
+    }
+}
+.lb-body{
+    padding: 10px 0 0;
+}
+.lb-box{
+    overflow: hidden;
+    width: 1190px;
+    height: 374px;
+    position: relative;
+}
+.lb-list{
+    width: 1800px;
+    padding-bottom: 10px;
+    position: absolute;
+    left: 0;
+}
+.lb-item{
+    transition: height linear .3s;
+    margin-right: 10px;
+    float: left;
+    width: 290px;
+    background-color: #fff;
+    padding-bottom: 10px;
+    overflow: hidden;
+    &:hover{
+        box-shadow: 0 0 6px #aaa;
+    }
+    &:hover img{
+        transform: scale(1.05);
+    }
+    img{
+        transition: transform 1s,-webkit-transform 1s;
+    }
+}
+.lb-txt{
+    display: block;
+    margin: 10px 0;
+    padding: 0 10px;
+    &:hover .txt-head{
+        color: #2979ff
+    }
+    &:hover .describe{
+        color: #2979ff
+    }
+}
+.txt-wrap{
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+}
+.txt-head{
+    float: left;
+    width: 60%;
+    overflow: hidden;
+    color: #999;
+}
+.txt-price{
+    float: right;
+    font-size: 12px;
+    color: #ff4949;
+}
+.describe{
+    color: #333;
+    margin: 10px 0;
+    height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.date{
+    padding: 0 10px;
+    line-height: 24px;
+    text-align: right;
+    color: #999;
+    font-size: 12px;
+    line-height: 24px;
+}
+.box-btn{
+    display: inline-block;
+    top: 120px;
+    width: 22px;
+    height: 50px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.prev{
+    left: 0;
+    background: url(../images/index_new_icos.png) no-repeat -42px -304px;    
+}
+.next{
+    right: 0;
+    background: url(../images/index_new_icos.png) no-repeat -65px -304px;    
+}
+.recommend{
+    margin-bottom: 20px;
+}
+.recommend-body{
+    margin: 0 auto;
+    width: 1190px;
+}
+.foryou-head{
+    background-color: #2979ff;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 10px 10px 0 0;
+    padding: 0 18px;
+    h3{
+        float: left;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+        i{
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin-right: 6px;
+            background: url(../images/index_new_icos.png) no-repeat 0 -313px;
+            vertical-align: middle;
+        }
+    }
+}
+.foryou-body{
+    padding: 10px 0;
+    overflow: hidden;
+}
+.recommend-list{
+    margin: -10px 0 0 -10px;
+}
+.recommend-item{
+    margin: 10px 0 0 10px;
+    width: 230px;
+    padding-bottom: 10px;
+    float: left;
+    position: relative;
+    background-color: #fff;
+    &:hover{
+        box-shadow: 0 0 6px #aaa;
+    }
+    &:hover img{
+        transform: translateY(-5px);
+    }
+    &:hover .item-txt{
+        color: #2979ff
+    }
+}
+.item-link{
+    display: block;
+    padding: 10px;
+    img{
+        display: block;
+        margin: 17px auto;
+        width: 160px;
+        height: 160px;
+        transition: transform .4s ease;
+        transform: translateY(0);
+    }
+}
+.item-txt{
+    color: #666;
+    height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.recommend-price{
+    padding: 10px;
+    font-size: 14px;
+    color: #ff4949;
     i{
         font-size: 12px;
     }
