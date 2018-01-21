@@ -6,6 +6,7 @@ requirejs.config({
         "banner":"scripts/banner",
         "loadcard":"scripts/showcard",
         "selectcard":"scripts/selectcard",
-        "smallbanner":"scripts/smallbanner"
+        "smallbanner":"scripts/smallbanner",
+        "form":"scripts/formValidation"
     }
 })

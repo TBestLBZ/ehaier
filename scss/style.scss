@@ -151,6 +151,21 @@
 	position: absolute;
 	right: 64px;
 	top: 0;
+	&:hover .car{
+		border-bottom: none;
+		height: 32px;
+		z-index: 25;
+		
+	}
+	&:hover .car a{
+		color:#2979ff
+	}
+	&:hover .car span{
+		background-position:-99px -231px;			
+	}
+	&:hover .hide-car-list{
+		display: block
+	}
 	.car{
 		border: 1px solid #eaeaea;
 		position: relative;
@@ -185,7 +200,7 @@
 		}
 	}
 	.hide-car-list{
-		display: block;
+		display: none;
 		position: absolute;
 		background-color: #fffefe;
 		z-index: 20;
@@ -245,7 +260,7 @@
 	margin: 10px 10px 0 0;
 }
 .goods-navmine{
-	width: 192px; //要变成639  px
+	width: 192px; //要变成显示板的宽度  px
 	height: 430px;
 	position: absolute;
 	left: 0;
@@ -283,20 +298,23 @@
 	}
 }
 .show{
-	width: 0; //最后变成447px 用JS控制
+	//width: 0; //最后变成447px 用JS控制
+	width:447px; //最后变成447px 用JS控制
 	height: 430px;
     position: absolute;
     left: 192px;
     top: 0;
-    overflow: hidden;
+	overflow: hidden;
+	
 }
 .showpanel{
 	height: 430px;
     // width: 447px;
-	left: -447px;//变成0 用js控制
+	//left: -447px;//变成0 用js控制
 	position: absolute;
     top: 0;
-    font-size: 12px;
+	font-size: 12px;
+	overflow: hidden;	
 }
 .panel-left{
 	height: 430px;

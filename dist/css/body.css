@@ -227,6 +227,11 @@
 .icon4 {
   background: url(../images/index_new_icos.png) no-repeat -36px -164px; }
 
+.ad {
+  width: 1190px;
+  margin: 0 auto;
+  padding-bottom: 18px; }
+
 .salehot {
   margin-bottom: 30px; }
 

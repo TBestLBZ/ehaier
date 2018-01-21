@@ -204,6 +204,16 @@ table {
   position: absolute;
   right: 64px;
   top: 0; }
+  .head-shopcar:hover .car {
+    border-bottom: none;
+    height: 32px;
+    z-index: 25; }
+  .head-shopcar:hover .car a {
+    color: #2979ff; }
+  .head-shopcar:hover .car span {
+    background-position: -99px -231px; }
+  .head-shopcar:hover .hide-car-list {
+    display: block; }
   .head-shopcar .car {
     border: 1px solid #eaeaea;
     position: relative;
@@ -234,7 +244,7 @@ table {
       top: 5px;
       left: 124px; }
   .head-shopcar .hide-car-list {
-    display: block;
+    display: none;
     position: absolute;
     background-color: #fffefe;
     z-index: 20;
@@ -325,7 +335,7 @@ table {
     background: url(../images/jiantou.png) left top no-repeat; }
 
 .show {
-  width: 0;
+  width: 447px;
   height: 430px;
   position: absolute;
   left: 192px;
@@ -334,10 +344,10 @@ table {
 
 .showpanel {
   height: 430px;
-  left: -447px;
   position: absolute;
   top: 0;
-  font-size: 12px; }
+  font-size: 12px;
+  overflow: hidden; }
 
 .panel-left {
   height: 430px;
