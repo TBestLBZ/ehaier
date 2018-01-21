@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/login_head.css">
+    <link rel="stylesheet" href="css/enroll.css">
 </head>
 <body>
     <div class="head">
@@ -18,7 +19,7 @@
             <h2>注册顺逛商城</h2>
             <ul>
                 <li>
-                    <a href="###">已有海尔商城账号登录 ></a>
+                    <a href="http://localhost:8888/login.html">已有海尔商城账号登录 ></a>
                 </li>
             </ul>
         </div>
@@ -83,6 +84,7 @@
                                 <label class="label-tit">手机验证码</label>
                                 <input class="sjyzm-input" type="text" placeholder="请输入手机验证码">                                
                                 <button class="send-btn">发送验证码</button>
+                                <div class="sjyzm-error">请输入正确的手机验证码</div>
                             </div>
                             <div class="from-row xieyi">
                                 <br>
@@ -98,6 +100,27 @@
                                 <i class="way-email">邮箱</i>
                             </div>
                             <div class="next">下一步</div>
+                        </div>
+                        <div class="phone-user-step2">
+                            <div class="from-row passwordtip"><span>*密码为数字、字母、特殊符号的组合，长度6位~16位(字母区分大小写)</span></div>
+                            <div class="form-row">
+                                <label class="label-tit">登录密码</label>
+                                <input class="phone-password" type="password" placeholder="6-16位密码,包含大小写字母和数字">
+                                <div class="password-error">密码不能为空</div>
+                            </div>
+                            <br>
+                            
+                            <div class="from-row">
+                                <label class="label-tit">确认密码</label>
+                                <input class="phone-repassword" type="password" placeholder="请再次输入登录密码">
+                                <div class="repassword-error">密码不能为空</div>
+                            </div>
+                            <div class="passwordfinish">完成</div>
+                        </div>
+                        <div class="success">
+                            <p>恭喜您注册成功，快快进入商城赚取佣金吧。</p>
+                            <div class="enterShop"><a href="http://localhost:8888/index.html">进入商城</a></div>
+                            <div class="promote"><a href="http://localhost:8888/index.html">继续升级</a></div>
                         </div>
                     </form>
                 </div>

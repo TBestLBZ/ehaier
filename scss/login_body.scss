@@ -1,0 +1,188 @@
+.login-body{
+    height: 540px;
+    width: 100%;
+    overflow: hidden;
+    min-width: 1000px;
+    background: url(../images/shop_login_wrap_bg.png) no-repeat 50% 50%;
+}
+.inner-wrap{
+    width: 1190px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.inner-box{
+    margin: 0 auto;
+    position: relative;
+    padding: 35px 0 0 510px;
+    width: 490px;
+}
+.inner-mine{
+    border-radius: 3px;
+    padding: 4px;
+    position: relative;
+    background: #e8e8e8;
+}
+.mine-body{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    position: relative;
+    width: 488px;
+}
+.inner-mine .welcome{
+    border-bottom: 1px solid #ddd;
+    font: normal 22px/22px 'Microsoft Yahei';
+    padding: 25px 0 15px 15px;
+    position: relative;
+    a{
+        background-position: 0 0;
+        color: #005aaa;
+        font-size: 12px;
+        line-height: 20px;
+        position: absolute;
+        right: 15px;
+        padding-left: 25px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.login-tab-btn{
+    padding: 0px 114px;
+    p{
+        width: 100%;
+        height: 47px;
+        cursor: pointer;
+        font: 14px/47px "微软雅黑";
+        a{
+            width: 50%;
+            height: 45px;
+            width: 130px;
+            float: left;
+            text-align: center;
+            border-bottom: 2px solid #e4e4e4; 
+            font-size: 14px;
+        }
+    }
+}
+.login-tab-btn p .public-login{
+    color: #32beff;
+    border-bottom: 2px solid #32beff;
+    &:hover{
+        color: #666;
+    }
+}
+.login-tab-btn p .phone-login{
+    color: #666;
+    &:hover{
+        color: #666;
+    }
+}
+.login-form{
+    padding: 35px 114px 20px;
+    width: 260px;
+}
+.form-row{
+    font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    zoom: 1;
+    label{
+        color: #a4a4a4;
+        left: 38px;
+        position: absolute;
+        top: 7px;
+        font-size: 14px;
+    }
+}
+.user-name,.user-password{
+    border: 1px solid #e4e4e4;
+    height: 26px;
+    line-height: 26px;
+    padding: 3px 3px 3px 38px;
+    width: 217px;
+    border-radius: 3px;
+}
+.login-icon{
+    left: 12px;
+    height: 20px;
+    position: absolute;
+    top: 7px;
+    width: 20px;
+}
+.user-icon{
+    background: url(../images/shop_login_sprite.png) no-repeat 0 -30px;
+}
+.password-icon{
+    background: url(../images/shop_login_sprite.png) no-repeat 0 -60px;
+}
+.username-error,.userpassword-error{
+    display: inline-block;
+    height: 16px;
+    color:#f00;
+}
+.forget{
+    a{
+        float: right;
+        color: #005aaa;
+        &:hover{
+        text-decoration: underline;
+        }
+    }
+}
+.btn-box{
+    padding: 8px 0;
+    a{
+        display: block;
+        font-size: 15px;
+        background: #32beff;
+        border-radius: 4px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        &:hover{
+            background: #005aaa;
+        }
+    }
+}
+.other-login{
+    border-top: 1px solid #ddd;
+    height: 20px;
+    padding: 14px 0;
+    ul{
+        height: 20px;
+        padding: 0 7px;
+        li{
+            float: left;
+            height: 20px;
+            margin-right: 4px;
+            a{
+                color:#666;
+                font-size: 12px;
+                float: left;
+                line-height: 20px;
+                padding-left: 25px;
+                width: auto;
+                &:hover{
+                    color: #2979ff;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.other-login li:nth-of-type(2) a{
+    background: url(../images/shop_login_sprite.png) no-repeat 0 -154px;
+}
+.other-login li:nth-of-type(3) a{
+    background: url(../images/shop_login_sprite.png) no-repeat 0 -222px;
+}
+.other-login li:nth-of-type(4) a{
+    background: url(../images/shop_login_sprite.png) no-repeat 0 -342px;
+}
+.other-login li:nth-of-type(5) a{
+    background: url(../images/shop_login_sprite.png) no-repeat ;
+}

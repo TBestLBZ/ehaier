@@ -7,6 +7,8 @@ requirejs.config({
         "loadcard":"scripts/showcard",
         "selectcard":"scripts/selectcard",
         "smallbanner":"scripts/smallbanner",
-        "form":"scripts/formValidation"
+        "form":"scripts/formValidation",
+        "cookie":"scripts/jquery.cookie",
+        "login":"scripts/loginCheck"
     }
 })

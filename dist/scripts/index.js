@@ -1,6 +1,6 @@
 /* 业务逻辑页面 */
 require(["scripts/config.js"], function () {
-    require(["jquery", "nav", "banner", "loadcard", "selectcard", "smallbanner", "form"], function ($, nav, banner, loadcard, selectcard, smallbanner, form) {
+    require(["jquery", "cookie","nav", "banner", "loadcard", "selectcard", "smallbanner", "form","login"], function ($,cookie,nav, banner, loadcard, selectcard, smallbanner, form,login) {
 
         var opts = {
             url: "json/jptj.json",
@@ -61,7 +61,7 @@ require(["scripts/config.js"], function () {
             })
         })
 
-
+        
 
 
     })
