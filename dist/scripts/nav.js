@@ -45,6 +45,7 @@ define(["jquery"],function($){
                 $(".show").css({
                     width: 240
                 }) 
+                
             }else if(this.index == 8){
                 $(".goods-navmine").css({
                     width: 192
@@ -58,7 +59,7 @@ define(["jquery"],function($){
                 })
                 $(".show").css({
                     width: 447
-                }) 
+                })
             }
 
             this.$show.css({
@@ -100,6 +101,7 @@ define(["jquery"],function($){
         },
         toShow:function(){
             //console.log(this.index)
+
             $(".show").eq(this.index).css({
                 display:"block"
             })

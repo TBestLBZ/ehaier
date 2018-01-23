@@ -9,6 +9,8 @@ requirejs.config({
         "smallbanner":"scripts/smallbanner",
         "form":"scripts/formValidation",
         "cookie":"scripts/jquery.cookie",
-        "login":"scripts/loginCheck"
+        "login":"scripts/loginCheck",
+        "detailsScroll":"scripts/detailsScroll",
+        "detailsCardChange":"scripts/detailsCardChange"
     }
 })
