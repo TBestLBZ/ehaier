@@ -11,6 +11,10 @@ requirejs.config({
         "cookie":"scripts/jquery.cookie",
         "login":"scripts/loginCheck",
         "detailsScroll":"scripts/detailsScroll",
-        "detailsCardChange":"scripts/detailsCardChange"
+        "detailsCardChange":"scripts/detailsCardChange",
+        "fdj":"scripts/fangdajing",
+        "numChange":"scripts/changeGoodsNumber",
+        "checkIndexLogin":"scripts/checkIndexLogin",
+        "guessCar":"scripts/guessCar"
     }
 })

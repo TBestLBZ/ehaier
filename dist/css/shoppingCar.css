@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/* 页面版新宽度变化 */
+body {
+  background: #fff; }
+
+.goods-navmine {
+  display: none; }
+
+.goods-category:hover .goods-navmine {
+  display: block; }
+
+#topbar .bar-wrap {
+  width: 1000px;
+  margin: 0 auto; }
+
+#head-wrap .head-grid {
+  width: 1000px;
+  margin: 0 auto; }
+
+#head-wrap .head-shopcar {
+  right: 0; }
+
+#head-wrap .head-search {
+  width: 490px; }
+
+#head-wrap .search-box input {
+  width: 419px; }
+
+#nav-bar .nav-bar {
+  width: 1000px;
+  margin: 0 auto; }
+
+.crumb {
+  line-height: 30px;
+  padding: 5px 4px;
+  clear: both; }
+  .crumb a {
+    margin: 0 4px;
+    font-size: 12px;
+    color: #666; }
+    .crumb a:hover {
+      color: #2979ff; }
+
+/* 主体样式 */
+.big-wrap {
+  background: #FFF; }
+
+.bigwrap-main {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0 20px; }
+
+.car-empty {
+  line-height: 2em;
+  margin: 0 0 40px;
+  padding: 10px 0 10px 330px;
+  width: 400px;
+  background: url(../images/cart_no_ico.png) no-repeat 200px 0; }
+
+.empty-txt {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 0 10px; }
+
+.car-empty p a {
+  color: #015ba7;
+  margin: 0 2px;
+  text-decoration: underline; }
+  .car-empty p a:hover {
+    text-decoration: none;
+    color: #2979ff; }
+
+.recommend {
+  height: 292px;
+  overflow: hidden;
+  position: relative;
+  width: 1000px; }
+
+.recommend h2 {
+  color: #d71249;
+  font-size: 1.4em;
+  font-weight: 400;
+  height: 41px;
+  line-height: 41px; }
+
+.tab-box {
+  height: 251px;
+  position: relative; }
+  .tab-box h3 {
+    background-position: -84px -200px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    height: 26px;
+    left: 95px;
+    line-height: 23px;
+    position: absolute;
+    text-align: center;
+    top: -30px;
+    width: 74px;
+    background: url(../images/icon-kinds.png) no-repeat -84px -200px; }
+
+.tab-box .tab1-title {
+  background-position: 0 -200px;
+  color: #fff; }
+
+.guess {
+  background: #fff none repeat scroll 0 0;
+  border-left: 1px solid #d0d0d0;
+  border-right: 1px solid #d0d0d0;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  width: 998px; }
+
+.tab-ul {
+  overflow: hidden;
+  position: relative;
+  width: 1000px;
+  height: 249px;
+  border-bottom: 1px solid #d0d0d0;
+  border-top: 1px solid #d0d0d0; }
+  .tab-ul li {
+    background-position: 1000px 0;
+    border-right: 1px solid #d0d0d0;
+    float: left;
+    height: 249px;
+    position: relative;
+    width: 249px; }
+
+.tab-pic {
+  display: block;
+  padding: 14px 0 6px;
+  text-align: center; }
+  .tab-pic img {
+    display: inline-block; }
+
+.goods-name {
+  font-weight: 400;
+  overflow: hidden;
+  padding: 0 15px;
+  text-align: center;
+  font-size: 16px; }
+
+.goods-name-txt {
+  font-size: 14px;
+  color: #26529b;
+  display: block;
+  height: 20px;
+  overflow: hidden;
+  padding: 2px 0 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 211px; }
+  .goods-name-txt:hover {
+    text-decoration: underline; }
+
+.goods-info {
+  display: block;
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 211px;
+  line-height: 20px; }
+  .goods-info:hover {
+    color: #2979ff; }
+
+.goods-price {
+  color: #d71249;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 2px 0 0; }
+
+.tab2 {
+  display: none; }
+
+.tab-box .tab2-title {
+  left: 175px; }

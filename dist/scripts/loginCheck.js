@@ -1,7 +1,7 @@
 /* 登录验证 */
 define(["jquery", "cookie"], function ($) {
     function LoginCheck(){
-        
+        this.init()
     }
     LoginCheck.prototype = {
         constructor:location,
@@ -24,6 +24,7 @@ define(["jquery", "cookie"], function ($) {
             this.$passWord.on("click",$.proxy(this.changePasswordTxt,this))
             this.passwordTxt.on("click",$.proxy(this.changePasswordTxt,this))
             this.$login.on("click",$.proxy(this.cookieCheck,this))
+            
         },
         nameCheck:function(){
             this.$nameStr = this.$name.val();
@@ -78,6 +79,7 @@ define(["jquery", "cookie"], function ($) {
                     _this.$nameError.html("用户名不存在")
                 }
             })
+            $.cookie("user-now",this.$nameStr)
         }
     }
     return new LoginCheck()

@@ -67,6 +67,14 @@ body {
   text-align: center;
   font-size: 0em; }
 
+.pic-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 380px;
+  height: 380px;
+  z-index: 1000; }
+
 .pic-show {
   height: 380px; }
 
@@ -78,11 +86,7 @@ body {
   display: none;
   width: 149.219px;
   height: 148.438px;
-  left: 0px;
-  top: 232px;
   position: absolute;
-  top: 0;
-  left: 0;
   background: #fff;
   border: 1px solid #e9493d;
   overflow: hidden;
@@ -115,6 +119,7 @@ body {
   border: 1px solid #ddd;
   overflow: hidden; }
   .pic-hide img {
+    position: absolute;
     width: 1024px;
     height: 1024px; }
 
@@ -126,12 +131,15 @@ body {
 .small-pic {
   position: relative;
   width: 325px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 85px; }
 
 .pic-ul {
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  width: 3000px; }
+  width: 3000px;
+  top: 0;
+  left: 0; }
 
 .pic-li {
   float: left;

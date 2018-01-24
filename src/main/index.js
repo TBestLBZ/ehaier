@@ -1,6 +1,6 @@
-/* 业务逻辑页面 */
+/* 首页业务逻辑页面 */
 require(["scripts/config.js"], function () {
-    require(["jquery", "cookie","nav", "banner", "loadcard", "selectcard", "smallbanner", "form","login","detailsScroll","detailsCardChange"], function ($,cookie,nav, banner, loadcard, selectcard, smallbanner, form,login,detailsScroll,detailsCardChange) {
+    require(["jquery", "cookie","checkIndexLogin","nav", "banner", "loadcard", "selectcard", "smallbanner", "form","login"], function ($,cookie,checkIndexLogin,nav, banner, loadcard, selectcard, smallbanner, form,login) {
 
         var opts = {
             url: "json/jptj.json",
@@ -62,20 +62,9 @@ require(["scripts/config.js"], function () {
         })
 
 
-        var _this = this
-        var opts = {
-            url: "json/details.json",
-            type: "GET",
-            //data: data,
-            context: this
-        }
-        $.ajax(opts).then(function (res) {
-            //console.log(res)
-            res.small.forEach(function (item, index) {
-                $(".pic-li").eq(index).find("img").attr("src", item.img)
-            })     
-            detailsCardChange.init(res)      
-        })
+       
+
+       
 
 
     })

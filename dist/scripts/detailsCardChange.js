@@ -1,12 +1,12 @@
 /* 详情页细节展示大小图对应  */
 define(["jquery"], function ($) {
-
     function Details() {
         
     }
     Details.prototype = {
         constructor: Details,
         init: function (res) {
+            //console.log(res)
             this.res = res;//数据
             this.$li = $(".pic-li");//小图
             this.$middle = $(".pic-show img");//中图
@@ -27,7 +27,7 @@ define(["jquery"], function ($) {
             var middleSrc = this.res.middle[index].img;
             var bigSrc = this.res.big[index].img;
             this.$middle.attr("src",middleSrc)
-            this.$big.attr("attr",bigSrc)
+            this.$big.attr("src",bigSrc)
             //console.log(bigSrc)
             this.$li.find("img").css({
                 border: "1px solid transparent"
@@ -35,24 +35,36 @@ define(["jquery"], function ($) {
                 border: "1px solid #ccc"
             })
         },
-        turnLeft:function(){
-            var $showWidth = this.$showLittle.width();
-            var $length = this.$li.length;
-            var $liWidth = this.$li.width();
-            var $cont = Math.ceil($length * $liWidth  / $showWidth);
-            console.log(this.$ul.offset().left)
-            
-        },
         turnRight:function(){
-
-        }
-           
-       
+            this.$showWidth = this.$showLittle.width();//显示li区域宽度
+            this.$length = this.$li.length;//li个数
+            this.$liWidth = this.$li.width();//一个li宽度
+            this.$cont = Math.ceil(this.$length * this.$liWidth  / this.$showWidth);
+            this.$maxWidth = -(this.$cont - 1) * this.$showWidth + "px"
+            this.$ulLeft = this.$ul.css("left")
+            if(this.$ulLeft <= this.$maxWidth){
+                return 0;
+            }else{
+                this.$ul.animate({
+                    left: "-="+this.$showWidth
+                })
+            }
+        },
+        turnLeft:function(){
+            this.$showWidth = this.$showLittle.width();//显示li区域宽度
+            this.$length = this.$li.length;//li个数
+            this.$liWidth = this.$li.width();//一个li宽度
+            this.$cont = Math.ceil(this.$length * this.$liWidth  / this.$showWidth);
+            this.$maxWidth = -(this.$cont - 1) * this.$showWidth + "px"
+            this.$ulLeft = this.$ul.css("left")
+            if(this.$ulLeft == "0px"){
+                return 0;
+            }else{
+                this.$ul.animate({
+                    left: "+="+this.$showWidth
+                })
+            }
+        }           
     }
-
-
-
-
-
     return new Details()
 })

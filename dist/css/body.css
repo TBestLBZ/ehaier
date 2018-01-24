@@ -105,6 +105,12 @@
   white-space: nowrap;
   text-overflow: ellipsis; }
 
+.rank {
+  line-height: 30px;
+  height: 30px;
+  padding: 5px 10px 0;
+  font-size: 12px; }
+
 .sign-wrap {
   text-align: center;
   padding: 9px 0 0; }
