@@ -71,7 +71,7 @@ define(["jquery", "cookie"], function ($) {
             aCookie.forEach(function(item){
                 if(item.name == _this.$nameStr){
                     if(item.password == _this.$passWordStr){
-                        window.location.href = "http://localhost:8888/index.html";
+                        window.location.href = "index.html";
                     }else{
                         _this.$passWordError.html("密码错误")
                     }

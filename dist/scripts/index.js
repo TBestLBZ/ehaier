@@ -19,10 +19,9 @@ require(["scripts/config.js"], function () {
                 } else {
                     $(".tags").eq(index).html(item.tags)
                 }
-
             })
         })
-
+ 
         var opts = {
             url: "json/salehot.json",
             type: "GET",
@@ -56,7 +55,7 @@ require(["scripts/config.js"], function () {
             console.log(res)
             res.wntj.forEach(function (item, index) {
                 $(".item-link").eq(index).attr("id",item.id);
-                $(".item-link").eq(index).attr("href","http://localhost:8888/goods_detail.html?id="+item.id);
+                $(".item-link").eq(index).attr("href","goods_detail.html?id="+item.id);
                 $(".item-link img").eq(index).attr("src", item.img);
                 $(".item-txt").eq(index).html(item.txt);
                 $(".recommend-price").eq(index).html(item.price);

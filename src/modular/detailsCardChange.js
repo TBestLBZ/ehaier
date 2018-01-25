@@ -45,7 +45,7 @@ define(["jquery"], function ($) {
             if(this.$ulLeft <= this.$maxWidth){
                 return 0;
             }else{
-                this.$ul.animate({
+                this.$ul.stop().animate({
                     left: "-="+this.$showWidth
                 })
             }
@@ -60,7 +60,7 @@ define(["jquery"], function ($) {
             if(this.$ulLeft == "0px"){
                 return 0;
             }else{
-                this.$ul.animate({
+                this.$ul.stop().animate({
                     left: "+="+this.$showWidth
                 })
             }

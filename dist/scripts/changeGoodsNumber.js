@@ -30,7 +30,7 @@ define(["jquery"], function ($) {
         },
         oninput:function(){
             var $val = this.$show.val();//输入的值
-            console.log($val)
+            // console.log($val)
         }
     }
     return new NumChange()
