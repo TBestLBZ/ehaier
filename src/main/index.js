@@ -53,8 +53,10 @@ require(["scripts/config.js"], function () {
             context: this
         }
         $.ajax(opts).then(function (res) {//为你推荐图片
-            //console.log(res.wntj)
+            console.log(res)
             res.wntj.forEach(function (item, index) {
+                $(".item-link").eq(index).attr("id",item.id);
+                $(".item-link").eq(index).attr("href","http://localhost:8888/goods_detail.html?id="+item.id);
                 $(".item-link img").eq(index).attr("src", item.img);
                 $(".item-txt").eq(index).html(item.txt);
                 $(".recommend-price").eq(index).html(item.price);
@@ -69,3 +71,6 @@ require(["scripts/config.js"], function () {
 
     })
 })
+
+
+

@@ -12,7 +12,7 @@ define(["jquery"], function ($) {
             this.$add.on("click",$.proxy(this.add,this))
             this.$add.on("selectstart",function(){return false})
             this.$reduce.on("click",$.proxy(this.reduce,this))
-            this.$reduce.on("selectstart",function(){return false})
+            this.$reduce.on("selectstart",function(){return false});//阻止快速点击时选中文字情况
             this.$show.on("input",$.proxy(this.oninput,this))
         },
         add:function(){

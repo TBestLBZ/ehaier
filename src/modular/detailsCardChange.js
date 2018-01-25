@@ -24,8 +24,8 @@ define(["jquery"], function ($) {
             this.$right.on("click",$.proxy(this.turnRight,this))
         },
         change:function(index){//鼠标移入切换 大中小三个图
-            var middleSrc = this.res.middle[index].img;
-            var bigSrc = this.res.big[index].img;
+            var middleSrc = this.res.info.middle[index].img;
+            var bigSrc = this.res.info.big[index].img;
             this.$middle.attr("src",middleSrc)
             this.$big.attr("src",bigSrc)
             //console.log(bigSrc)

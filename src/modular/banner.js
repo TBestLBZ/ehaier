@@ -115,9 +115,6 @@ define(["jquery"], function ($) {
             this.auto()
         }
 
-
-
-
     }
 
     return new Banner();

@@ -15,6 +15,8 @@ requirejs.config({
         "fdj":"scripts/fangdajing",
         "numChange":"scripts/changeGoodsNumber",
         "checkIndexLogin":"scripts/checkIndexLogin",
-        "guessCar":"scripts/guessCar"
+        "guessCar":"scripts/guessCar",
+        "addShoppingCar":"scripts/addShoppingCar",
+        "updateGoods":"scripts/updateGoods"
     }
 })
