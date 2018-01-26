@@ -143,11 +143,13 @@
   float: left; }
   .serve-left:hover, .serve-right:hover {
     color: #2979ff; }
+  .serve-left:hover ssg-icon, .serve-right:hover ssg-icon {
+    background-position: -36px -73px; }
 
 .serve-left:hover .club-icon {
   background-position: -36px -40px; }
 
-.serve-left:hover .ssg-icon {
+.serve-right:hover .ssg-icon {
   background-position: -36px -73px; }
 
 .club-icon, .ssg-icon {
