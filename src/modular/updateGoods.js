@@ -1,4 +1,4 @@
-/* 更新购物车页面商品信息 */
+/* 更新购物车页面商品信息（数量增加减少 删除商品 全选  单个商品操作） */
 define(["jquery", "cookie"], function ($) {
     function UpdateGoods(){
         this.init();
@@ -6,12 +6,12 @@ define(["jquery", "cookie"], function ($) {
     UpdateGoods.prototype = {
         constructor:UpdateGoods,
         init:function(){
-            this.box = $(".total");
+            this.box = $(".total");//动态加载的商品加到它之前
             this.$empty = $(".empty-bigwrap");//无Cookie显示页面
             this.$hasGoods = $(".has-goodswrap");//有cookie显示页面
             this.judge();
         },
-        judge:function(){
+        judge:function(){//判断显示空白页还是有商品的页面
             if($.cookie("shoppingCar")){//是否存在cookie
                 this.sCookie = $.cookie("shoppingCar");
                 this.aCookie = JSON.parse(this.sCookie);
@@ -47,7 +47,7 @@ define(["jquery", "cookie"], function ($) {
             $(".prev").on("click",this.changeCountReduce)
             $(".itemCheck").on("click",this.itemChange)
         },
-        loadDoods:function(){
+        loadDoods:function(){//动态加载商品
             for(var i = 0 ;i < this.aCookie.length;i++){
                 var $img = this.aCookie[i].img;
                 var $title = this.aCookie[i].txt;
@@ -94,7 +94,7 @@ define(["jquery", "cookie"], function ($) {
                 this.box.before(item)
             }
         },
-        deletItem:function(e){
+        deletItem:function(e){//商品删除
             var target = e.target
             var $index = $(target).attr("id");
             //console.log($index)
@@ -103,8 +103,7 @@ define(["jquery", "cookie"], function ($) {
             $.cookie("shoppingCar",sCookie)
             location.reload();//重新加载页面获取cookie信息
         },
-        allChange:function(){
-            var index = $(".itemCheck")
+        allChange:function(){//全选按钮
             if( $(".allselect").prop("checked")){
                 $(".allselect").prop("checked",true)
                 $(".itemCheck").prop("checked",true)
@@ -122,7 +121,7 @@ define(["jquery", "cookie"], function ($) {
                 $(".sum").html("￥"+0)    
             }
         },
-        sum:function(){
+        sum:function(){//页面加载后计算总价与数量
             var reg = /[1-9]\d*\.?\d*/g;
             var arrPrice = $(".xiaoji i");
             var arrCount = $(".txt")
@@ -139,7 +138,7 @@ define(["jquery", "cookie"], function ($) {
             $(".count").html(count)
             $(".sum").html("￥"+sum)
         },
-        changeCountAdd:function(){
+        changeCountAdd:function(){//商品数量增加
             var sCookie = $.cookie("shoppingCar");
             var aCookie= JSON.parse(sCookie)
             var $id = $(this).attr("id");
@@ -174,7 +173,7 @@ define(["jquery", "cookie"], function ($) {
             $(".sum").html("￥"+sum)
             $(".count").html(count)
         },
-        changeCountReduce:function(){
+        changeCountReduce:function(){//商品数量减少
             var sCookie = $.cookie("shoppingCar");
             var aCookie= JSON.parse(sCookie)
             var $id = $(this).attr("id");
@@ -212,17 +211,16 @@ define(["jquery", "cookie"], function ($) {
             $(".sum").html("￥"+sum)
             $(".count").html(count)
         },
-        itemChange:function(){
+        itemChange:function(){//取消某件商品
             var index = $(this).attr("id")
             var $xiaoji = $(".form-body[id="+index+"] .xiaoji i").html()
-            var reg = /[1-9]\d*\.?\d*/g;
+            var reg = /[0-9]\d*\.?\d*/g;
             var $nXiaoji = parseInt($xiaoji.match(reg)[0])
             var $count = $(".form-body[id="+index+"] .txt").val()
             var $nCount = parseInt($count)
             var $allSum = $(".sum").html()
             var $nAllSum = parseInt($allSum.match(reg)[0])
             var $allCount = parseInt($(".count").html())
-            //console.log($nAllSum)
             if( $(".itemCheck[id="+index+"]").prop("checked")){
                 $(".itemCheck[id="+index+"]").prop("checked",true)
                 $(".form-body[id="+index+"]").css({
@@ -244,10 +242,6 @@ define(["jquery", "cookie"], function ($) {
                 $(".sum").html("￥"+$reduceThenPrice)
             }
         }
-
-
-
-
 
     }
     return new UpdateGoods()

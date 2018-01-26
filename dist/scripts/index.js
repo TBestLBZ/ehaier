@@ -52,7 +52,7 @@ require(["scripts/config.js"], function () {
             context: this
         }
         $.ajax(opts).then(function (res) {//为你推荐图片
-            console.log(res)
+            //console.log(res)
             res.wntj.forEach(function (item, index) {
                 $(".item-link").eq(index).attr("id",item.id);
                 $(".item-link").eq(index).attr("href","goods_detail.html?id="+item.id);
